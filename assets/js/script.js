@@ -28,7 +28,7 @@ axios
 			const markup = `
             <div class="card m-3 col">
 						<img class="my-3" src="${diapositive.url}" alt="" />
-						<p>${diapositive.title}</p>
+						<p class="text-start">${diapositive.title}</p>
 					</div>`
 			rowEl.insertAdjacentHTML('beforeend', markup)
 		})
