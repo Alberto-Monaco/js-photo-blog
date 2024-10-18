@@ -16,6 +16,8 @@ const rowEl = document.querySelector('.row')
 axios
 	.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
 
-	.then((response) => {})
+	.then((response) => {
+		const diapositive = response.data
+	})
 
 	.catch((error) => console.log(error))

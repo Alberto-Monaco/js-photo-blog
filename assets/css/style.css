@@ -10,7 +10,7 @@ body {
 
 
 .card:hover {
-    scale: 1.15;
+    scale: 1.10;
     rotate: 5deg;
     transition: 0.5s;
 }
