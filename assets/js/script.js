@@ -13,11 +13,25 @@ sfruttando la risposta per generare dinamicamente in pagina una serie di foto!
 rendi la pagina responsive, in modo che su mobile e tablet le foto si dispongano man mano una sotto l’altra ed il titolo abbia una dimensione adeguata*/
 
 const rowEl = document.querySelector('.row')
+console.log(rowEl)
+
 axios
 	.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
 
 	.then((response) => {
 		const diapositive = response.data
+		console.log(diapositive)
+		console.log(diapositive[0].url)
+		console.log(diapositive[0].title)
+
+		diapositive.forEach((diapositive) => {
+			const markup = `
+            <div class="card m-3 col">
+						<img class="my-3" src="${diapositive.url}" alt="" />
+						<p>${diapositive.title}</p>
+					</div>`
+			rowEl.insertAdjacentHTML('beforeend', markup)
+		})
 	})
 
 	.catch((error) => console.log(error))
