@@ -27,6 +27,7 @@ axios
 		diapositive.forEach((diapositive) => {
 			const markup = `
             <div class="card m-3 col">
+						<img id="pin" src="./assets/img/pin.svg" alt="Pin" />
 						<img class="my-3" src="${diapositive.url}" alt="" />
 						<p class="text-start">${diapositive.title}</p>
 					</div>`
