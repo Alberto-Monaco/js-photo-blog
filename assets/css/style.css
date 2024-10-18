@@ -5,5 +5,12 @@ header {
 
 body {
     background-image: url(../img/cork.png);
+}
 
+
+
+.card:hover {
+    scale: 1.15;
+    rotate: 5deg;
+    transition: 0.5s;
 }
