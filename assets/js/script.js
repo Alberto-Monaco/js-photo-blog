@@ -60,9 +60,11 @@ axios
 		console.log(overlayImgEl)
 
 		//quando clicco su una foto, l'overlay appare con la foto cliccata
-		cardImgEl.addEventListener('click', () => {
-			overlayEl.style.display = 'block'
-			overlayImgEl.src = cardImgEl.src
+		cardImgEl.forEach((image) => {
+			image.addEventListener('click', () => {
+				overlayEl.style.display = 'block'
+				overlayImgEl.src = image.src
+			})
 		})
 		//se clicco sul pulsante di chiusura, l'overlay scompare
 		closeBtnEl.addEventListener('click', () => {
