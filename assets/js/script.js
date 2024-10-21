@@ -37,19 +37,18 @@ axios
 	.then((response) => {
 		const diapositive = response.data
 		console.log(diapositive)
-		console.log(diapositive[0].thumbnailUrl)
+		console.log(diapositive[0].url)
 		console.log(diapositive[0].title)
 
 		diapositive.forEach((diapositive) => {
 			const markup = `
             <div class="card m-3 col">
 						<img id="pin" src="./assets/img/pin.svg" alt="Pin" />
-						<img class="my-3" src="${diapositive.thumbnailUrl}" alt="" />
+						<img class="card-img my-3" src="${diapositive.url}" alt="" />
 						<p class="text-start">${diapositive.title}</p>
 					</div>`
 			rowEl.insertAdjacentHTML('beforeend', markup)
 		})
+		const overlay = document.querySelector('.overlay')
 	})
-
 	.catch((error) => console.log(error))
-thumbnailUrl
