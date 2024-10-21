@@ -29,16 +29,16 @@ Ci sono diversi modi di farlo, prova a sperimentare :slightly_smiling_face:
 Inoltre il mouse diventa un puntatore, per far capire all’utente che può cliccare*/
 
 const rowEl = document.querySelector('.row')
-console.log(rowEl)
+//console.log(rowEl)
 
 axios
 	.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
 
 	.then((response) => {
 		const diapositive = response.data
-		console.log(diapositive)
-		console.log(diapositive[0].url)
-		console.log(diapositive[0].title)
+		//console.log(diapositive)
+		//console.log(diapositive[0].url)
+		//console.log(diapositive[0].title)
 
 		diapositive.forEach((diapositive) => {
 			const markup = `
@@ -53,10 +53,16 @@ axios
 		const cardImgEl = document.querySelectorAll('.card-img')
 		const closeBtnEl = document.querySelector('.close-btn')
 		const overlayImgEl = document.querySelector('.overlay-img')
+
+		console.log(overlayEl)
+		console.log(cardImgEl)
+		console.log(closeBtnEl)
+		console.log(overlayImgEl)
+
 		//quando clicco su una foto, l'overlay appare con la foto cliccata
 		cardImgEl.addEventListener('click', () => {
-			overlayImgEl.src = cardImgEl.src
 			overlayEl.style.display = 'block'
+			overlayImgEl.src = cardImgEl.src
 		})
 		//se clicco sul pulsante di chiusura, l'overlay scompare
 		closeBtnEl.addEventListener('click', () => {
