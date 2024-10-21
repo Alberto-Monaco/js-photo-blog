@@ -49,6 +49,18 @@ axios
 					</div>`
 			rowEl.insertAdjacentHTML('beforeend', markup)
 		})
-		const overlay = document.querySelector('.overlay')
+		const overlayEl = document.querySelector('.overlay')
+		const cardImgEl = document.querySelectorAll('.card-img')
+		const closeBtnEl = document.querySelector('.close-btn')
+		const overlayImgEl = document.querySelector('.overlay-img')
+		//quando clicco su una foto, l'overlay appare con la foto cliccata
+		cardImgEl.addEventListener('click', () => {
+			overlayImgEl.src = cardImgEl.src
+			overlayEl.style.display = 'block'
+		})
+		//se clicco sul pulsante di chiusura, l'overlay scompare
+		closeBtnEl.addEventListener('click', () => {
+			overlayEl.style.display = 'none'
+		})
 	})
 	.catch((error) => console.log(error))
