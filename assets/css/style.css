@@ -64,10 +64,10 @@ h1 {
 }
 
 .close-btn {
-    bottom: 1%;
+    top: 7%;
     left: 50%;
     position: absolute;
-    transform: translate(-50%, -1%);
+    transform: translate(-50%, -50%);
 }
 
 .card-img {
