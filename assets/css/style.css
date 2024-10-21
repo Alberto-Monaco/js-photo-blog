@@ -69,3 +69,7 @@ h1 {
     position: absolute;
     transform: translate(-50%, -1%);
 }
+
+.card-img {
+    cursor: pointer;
+}
