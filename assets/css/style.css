@@ -7,6 +7,9 @@ body {
     background-image: url(../img/cork.png);
 }
 
+p {
+    text-transform: capitalize;
+}
 
 
 .card:hover {
